@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom/client';
+import App from './App.js';
 
 const WINS = {
   rock: 'scissor',
@@ -22,6 +23,7 @@ const other = 'scissor';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <>
+  <App />
   <h1 id="title">가위바위보</h1>
   <h2>{getResult(me, other)}</h2>
   <button onClick={handleClick} className='hand'>가위</button>
