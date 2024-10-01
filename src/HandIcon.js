@@ -1,7 +1,16 @@
-import rock from './assets/rock.svg';
+import rockImg from './assets/rock.svg';
+import scissorImg from './assets/scissor.svg';
+import paperImg from './assets/paper.svg';
 
-function Rock() {
-	return <img src={rock} alt='가위' />;
+const IMAGES = {
+	rock: rockImg,
+	scissor: scissorImg,
+	paper: paperImg,
+  };
+  
+function HandIcon( {value} ) {
+	const src = IMAGES[value];
+	return <img src={src} alt={value} />;
 }
 
-export default Rock;
+export default HandIcon;
